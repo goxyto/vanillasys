@@ -6,14 +6,14 @@ def valid_number(n):
 
     return False if number is invalid:
         - n is not integer
-        - bigger than 987, shorter than 123
+        - bigger than 987, shorter than 210
         - digits in not descending order
 
     otherwhise number is valid, return True
     """
     if not type(n).__name__ == 'int':
         return False
-    if not 987>n>123:
+    if not 987>=n>=210:
         return False
     hundreds, tens, units = str(n)
     if units>=tens:
@@ -57,7 +57,7 @@ def puzzle_numbers(n):
 for i in range(10):
     number = 0
     while 1:
-        number = randint(123, 987)
+        number = randint(210, 987)
         if valid_number(number):
             break
     print "Test with: ", number
