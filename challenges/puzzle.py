@@ -48,7 +48,6 @@ def puzzle_numbers(n):
     # uncomment next lines if you're not running the tests:
     #if not valid_number(n):
     #    return -1
-    hundreds, tens, units = str(n)
     difference = n - reverse(n)
     return difference + reverse(difference)
 
